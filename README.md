@@ -4,15 +4,15 @@
 
 
 ```
-import github.com/yudppp/structs
+import "github.com/yudppp/structs"
 
 type User struct {
     Name string `example:"ichiro" default:"suzuki"`
 }
 
-example := NewExample(User{}).(User)
+example := structs.NewExample(User{}).(User)
 fmt.Println(User.Name) # -> ichiro
 
-d := NewDefault(User{}).(User)
+d := structs.NewDefault(User{}).(User)
 fmt.Println(User.Name) # -> suzuki
 ```
